@@ -25,6 +25,7 @@
 .header .menuNav .Nabvar-horizontal .paddingIcon .navIcon {
   color: #050505;
   font-size: 2.2rem;
+  cursor: pointer;
 }
 .header .menuNav .Nabvar-horizontal .paddingIcon .navIconSmall {
   color: #050505;
@@ -47,7 +48,7 @@
   transition: width 0.5s ease-in-out;
 }
 .sidebar.active {
-  width: 250px;
+  width: 190px;
 }
 
 .sidebarContent {
@@ -81,6 +82,13 @@
   display: block;
   color: #050505;
   text-decoration: none;
+}
+.sidebarContent .sidebarPath:hover {
+  font-size: 1.4rem;
+  transition: all 0.3s ease-in-out;
+}
+.sidebarContent .sidebarPath:hover .iconActive {
+  color: white;
 }
 
 .linkStyle {

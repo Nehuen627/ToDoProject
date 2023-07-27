@@ -1,8 +1,11 @@
+import "../../Sass/GlobalPadding.css"
+import TaskCreator from "../TaskCreator/TaskCreator"
 
 const Home = () => {
     return (
-        <div>
+        <div className="body">
             <h1>home</h1>
+            <TaskCreator/>
         </div>
     )
 }

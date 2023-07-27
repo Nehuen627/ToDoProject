@@ -23,6 +23,7 @@
                 .navIcon{
                     color: a.$Black;
                     font-size: 2.2rem;
+                    cursor: pointer; 
                 }
                 .navIconSmall{
                     color: a.$Black;
@@ -47,7 +48,7 @@
     overflow-x: hidden;
     transition: width 0.5s ease-in-out; 
     &.active{
-        width: 250px;
+        width: 190px;
     }
 }
 .sidebarContent{
@@ -80,6 +81,13 @@
             color: a.$Black;
             text-decoration: none;
         }
+    }
+    .sidebarPath:hover{
+        .iconActive{
+            color:white;
+        }
+        font-size: 1.4rem;
+        transition: all 0.3s ease-in-out;
     }
 }
 .linkStyle{
