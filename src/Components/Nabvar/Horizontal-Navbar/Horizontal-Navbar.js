@@ -3,15 +3,17 @@ import { NavLink } from "react-router-dom";
 import { PersonCircle} from "react-bootstrap-icons";
 import { Bell } from "react-bootstrap-icons";
 import { List } from "react-bootstrap-icons";
-import { useState } from "react";
 import SidebarNavbar from "../Sidebar/Sidebar-Navbar";
 import "../Style/Navbar.css"
+import { useContext } from "react"
+import { SidebarContext } from "../../../Context/padding";
+
 
 const HorizontalNavbar = () => {
-    const [sidebarState, setSidebarState] = useState(false);
+    const {sidebarState, setSidebarState} = useContext(SidebarContext);
     const SidebarToggle = () => {
         setSidebarState(!sidebarState);
-        console.log("click")
+        
     }
     return (
         <div className="menuNav">

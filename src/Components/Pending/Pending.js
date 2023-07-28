@@ -1,10 +1,11 @@
-import "../../Sass/GlobalPadding.css"
+import GetData from "../LS/GetData";
 import UploadData from "../LS/UploadData";
 import TaskSee from "../Visualizator/TaskSee";
-import { useState } from "react";
-
+import { useState, useContext } from "react";
+import { SidebarContext } from "../../Context/padding";
 const Pending = () => {
-    const [todoTasks, setTodoTasks] = useState(JSON.parse(localStorage.getItem('todoTasks')) || []);
+    const { sidebarState } = useContext(SidebarContext);
+    const [todoTasks, setTodoTasks] = useState(GetData("todo") || []);
 
     const handleDelete = (index) => {
         const newTodoTasks = todoTasks.filter((_, i) => i !== index);
@@ -28,13 +29,14 @@ const Pending = () => {
             Description={task.Description} 
             date={task.Date} 
             index={index} 
+            state={task.State}
             onDelete={() => handleDelete(index)}
             onComplete={() => handleComplete(index)}
         />
     ));
 
     return (
-        <div className="body">{createVisualizator}</div>
+        <div  className={`otherComponent ${sidebarState ? "classWithSidebar" : "classWithoutSidebar"}`}>{createVisualizator}</div>
     );
 }
 export default Pending

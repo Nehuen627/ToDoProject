@@ -6,6 +6,8 @@ import "../Style/Navbar.css"
 import { Link } from "react-router-dom"
 
 const SidebarNavbar = ({sidebarState}) => {
+
+
     return (
         <div className={`sidebar ${sidebarState ? 'active' : ''}`}>
             <div className={`sidebarContent ${sidebarState ? "sidebarContentActive" : ""}`}>
@@ -15,7 +17,7 @@ const SidebarNavbar = ({sidebarState}) => {
                         <h2 className={`${sidebarState ? 'iconActive' : 'iconDeactive'}`}>Home</h2>
                     </div>
                 </Link>
-                <Link className="linkStyle">
+                <Link className="linkStyle" to="/Calendar">
                     <div className="sidebarPath">
                         <Calendar className="sidebarIcon"/>
                         <h2 className={`${sidebarState ? 'iconActive' : 'iconDeactive'}`}>Calendar</h2>
@@ -27,7 +29,7 @@ const SidebarNavbar = ({sidebarState}) => {
                         <h2 className={`${sidebarState ? 'iconActive' : 'iconDeactive'}`}>Pending</h2>
                     </div>
                 </Link>
-                <Link className="linkStyle">
+                <Link className="linkStyle" to="/Completed">
                     <div className="sidebarPath">
                         <Check className="sidebarIcon"/>
                         <h2 className={`${sidebarState ? 'iconActive' : 'iconDeactive'}`}>Done</h2>

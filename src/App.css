@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+.mainContainer{
+  display: flex;
+}
+.content{
+  flex-grow: 1;
+}
+.classWithSidebar,
+.classWithoutSidebar {
+  transition: padding 0.8s ease;
+}
+.classWithSidebar {
+  padding-top: 70px;
+  padding-left: 220px;
+}
+
+.classWithoutSidebar {
+  padding-top: 70px;
+  padding-left: 100px;
+}

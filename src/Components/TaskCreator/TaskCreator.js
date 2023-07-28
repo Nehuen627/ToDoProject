@@ -29,7 +29,7 @@ const TaskCreator = () => {
         <form onSubmit={handleSubmit}>
             <div>
                 <label htmlFor="titulo">Título:</label>
-                <input type="text" id="titulo" value={title} onChange={(e) => setTitulo(e.target.value)} />
+                <input type="text" id="titulo" value={title} onChange={(e) => setTitulo(e.target.value)} required/>
             </div>
             <div>
                 <label htmlFor="descripcion">Descripción:</label>
@@ -37,7 +37,7 @@ const TaskCreator = () => {
             </div>
             <div>
                 <label htmlFor="fecha">Fecha:</label>
-                <input type="date" id="fecha" value={date} onChange={(e) => setFecha(e.target.value)} />
+                <input type="date" id="fecha" value={date} onChange={(e) => setFecha(e.target.value)} required/>
             </div>
             <div>
                 <button type="submit">Aceptar</button>
