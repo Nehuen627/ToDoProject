@@ -1,5 +1,6 @@
 import { useState } from "react";
 import UploadData from "../LS/UploadData";
+import "./TaskCreatorStyle.css"
 const TaskCreator = () => {
     const [title, setTitulo] = useState('');
     const [description, setDescripcion] = useState('');
@@ -26,7 +27,7 @@ const TaskCreator = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className="formBox">
             <div>
                 <label htmlFor="titulo">Título:</label>
                 <input type="text" id="titulo" value={title} onChange={(e) => setTitulo(e.target.value)} required/>

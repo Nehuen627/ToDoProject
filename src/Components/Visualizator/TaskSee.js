@@ -1,18 +1,19 @@
+import "./TaskSeeStyle.css"
 const TaskSee = ({Title, Description, date, state, onDelete, onComplete}) => {
 
     return (
-        <div className="task-display">
+        <div className="taskDisplay">
             <h2>{Title}</h2>
-            <p>{Description}</p>
+            <p className="description">{Description}</p>
             <p>{`Fecha límite: ${date}`}</p>
             {state === "todo" ? (
                 <div>
-                    <button onClick={onDelete}>Eliminar</button>
-                    <button onClick={onComplete}>Marcar como terminada</button>
+                    <button onClick={onDelete} className="delete">Eliminar</button>
+                    <button onClick={onComplete} className="complete">Marcar como terminada</button>
                 </div>
             ) : (
                 <div>
-                    <button onClick={onDelete}>Eliminar del historial</button>
+                    <button onClick={onDelete} className="delete">Eliminar del historial</button>
                 </div>
             )}
         </div>

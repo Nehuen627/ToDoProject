@@ -3,6 +3,7 @@ import UploadData from "../LS/UploadData";
 import TaskSee from "../Visualizator/TaskSee";
 import { useState, useContext } from "react";
 import { SidebarContext } from "../../Context/padding";
+import "../Visualizator/TaskSeeStyle.css"
 const Pending = () => {
     const { sidebarState } = useContext(SidebarContext);
     const [todoTasks, setTodoTasks] = useState(GetData("todo") || []);
@@ -36,7 +37,7 @@ const Pending = () => {
     ));
 
     return (
-        <div  className={`otherComponent ${sidebarState ? "classWithSidebar" : "classWithoutSidebar"}`}>{createVisualizator}</div>
+        <div  className={`otherComponent pendingBox ${sidebarState ? "classWithSidebar" : "classWithoutSidebar"}`}>{createVisualizator}</div>
     );
 }
 export default Pending

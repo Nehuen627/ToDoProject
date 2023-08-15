@@ -38,6 +38,7 @@
 }
 .mainContainer{
   display: flex;
+  overflow-x: auto;
 }
 .content{
   flex-grow: 1;
@@ -54,4 +55,12 @@
 .classWithoutSidebar {
   padding-top: 70px;
   padding-left: 100px;
+}
+.pendingBox{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 50px;
+  align-items: center;
+  justify-content: flex-start;
 }

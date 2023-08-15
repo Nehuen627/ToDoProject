@@ -1,0 +1,65 @@
+.formBox {
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.185);
+  border-radius: 10px;
+  background-color: #f8ead3;
+}
+
+.formBox div {
+  margin-bottom: 15px;
+}
+
+label {
+  font-family: "Bricolage Grotesque", sans-serif;
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 800;
+}
+
+input[type=text],
+input[type=date],
+textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+button[type=submit] {
+  background-color: #6b9484;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+button[type=submit]:hover {
+  background-color: #476a5d;
+}
+
+button[type=button] {
+  background-color: #ccc;
+  color: #333;
+  transition: background-color 0.3s;
+}
+
+button[type=button]:hover {
+  background-color: #aaa;
+}/*# sourceMappingURL=TaskCreatorStyle.css.map */
